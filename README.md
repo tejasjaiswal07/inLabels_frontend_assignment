@@ -1,38 +1,100 @@
-# sv
+# Notes Application
 
-Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
+A modern notes application built with SvelteKit and TailwindCSS, featuring a clean and intuitive user interface.
 
-## Creating a project
+## Features
 
-If you're seeing this, you've probably already done this step. Congrats!
+- Create, read, update, and delete notes
+- Real-time search functionality
+- Sort notes by creation date
+- Responsive design
+- Modern UI with TailwindCSS
+- Error handling and loading states
 
+## How to Run the App
+
+1. Clone the repository:
 ```bash
-# create a new project in the current directory
-npx sv create
-
-# create a new project in my-app
-npx sv create my-app
+git clone <your-repo-url>
+cd inlabels_frontend_assignment
 ```
 
-## Developing
+2. Install dependencies:
+```bash
+npm install
+```
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
-
+3. Start the development server:
 ```bash
 npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
 ```
 
-## Building
+4. Open your browser and navigate to `http://localhost:5173`
 
-To create a production version of your app:
+## Trade-offs and Assumptions
 
-```bash
-npm run build
-```
+1. **API Integration**:
+   - Using mockapi.io for the backend to simulate a real API
+   - Assumed the API would return data in a consistent format
+   - Implemented basic error handling for API failures
 
-You can preview the production build with `npm run preview`.
+2. **State Management**:
+   - Used Svelte's built-in state management instead of external libraries
+   - Assumed the application wouldn't need complex state management
+   - Kept state management simple and component-based
 
-> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
+3. **UI/UX Decisions**:
+   - Implemented a modal for delete confirmation to prevent accidental deletions
+   - Used a simple form for note creation/editing
+   - Assumed users would prefer a clean, minimal interface
+
+4. **Performance**:
+   - Implemented client-side sorting and filtering
+   - Assumed the number of notes would be manageable for client-side operations
+   - No pagination implemented for simplicity
+
+## Future Improvements
+
+1. **Authentication**:
+   - Add user authentication and authorization
+   - Implement user-specific notes
+   - Add secure API endpoints
+
+2. **Enhanced Features**:
+   - Add note categories/tags
+   - Implement rich text editing
+   - Add image upload support
+   - Implement note sharing functionality
+   - Add offline support with PWA
+
+3. **Performance Optimizations**:
+   - Implement server-side pagination
+   - Add caching mechanisms
+   - Optimize bundle size
+   - Add lazy loading for components
+
+4. **Testing**:
+   - Add unit tests for components
+   - Implement integration tests
+   - Add end-to-end testing
+   - Set up CI/CD pipeline
+
+5. **UI/UX Improvements**:
+   - Add dark mode support
+   - Implement keyboard shortcuts
+   - Add drag-and-drop functionality
+   - Improve mobile responsiveness
+   - Add animations and transitions
+
+6. **Code Quality**:
+   - Add TypeScript strict mode
+   - Implement better error boundaries
+   - Add comprehensive documentation
+   - Set up code quality tools (ESLint, Prettier)
+
+## Technologies Used
+
+- SvelteKit
+- TypeScript
+- TailwindCSS
+- MockAPI.io (for backend simulation)
